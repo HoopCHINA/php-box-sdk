@@ -133,11 +133,11 @@ function testPost() {
   $box->get(MY_BUCKET, MY_FILE_PATH, $file3);
 
   $res = $box->post(MY_BUCKET, MY_PATH, array(
-    'file2' => array(
+    MY_FILE2 => array(
       'file' => $file2,
       'content_type' => 'text/plain'
     ),
-    'file3' => array(
+    MY_FILE3 => array(
       'file' => $file3,
       'content_type' => 'image/jpeg'
     ),
