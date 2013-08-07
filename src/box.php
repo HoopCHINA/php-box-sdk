@@ -153,7 +153,9 @@ class HupuBox {
       $req = $client->post($uri, $headers);
 
       foreach ($files as $k => $v) {
-        if (!empty($v['content_type'])) {
+        if (!is_array($v)) {
+          $req->addPostFile($k, $v);
+        } else if (!empty($v['content_type'])) {
           $req->addPostFile($k, $v['file'], $v['content_type']);
         } else {
           $req->addPostFile($k, $v['file']);

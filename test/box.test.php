@@ -110,7 +110,6 @@ function testMove() {
   return !empty($res);
 }
 assert('testMove()');
-exit;
 
 // Copy File
 function testCopy() {
@@ -133,10 +132,7 @@ function testPost() {
   $box->get(MY_BUCKET, MY_FILE_PATH, $file3);
 
   $res = $box->post(MY_BUCKET, MY_PATH, array(
-    MY_FILE2 => array(
-      'file' => $file2,
-      'content_type' => 'text/plain'
-    ),
+    MY_FILE2 => $file2,
     MY_FILE3 => array(
       'file' => $file3,
       'content_type' => 'image/jpeg'
