@@ -1,7 +1,28 @@
 Box PHP SDK
 ===========
 
-TODO...
+安装说明
+------
+
+1. 本地建立 composer.json 文件；
+
+2. 加入以下内容:
+
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/HoopCHINA/php-box-sdk"
+        }
+    ],
+    "require": {
+        "HoopCHINA/php-box-sdk": "dev-master"
+    }
+}
+
+3. 使用 php composer.phar install 安装依赖包。 
+
+[TODO...]
 
 License
 -------
