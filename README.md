@@ -8,6 +8,7 @@ Box PHP SDK
 
 2. 加入以下内容:
 
+```javascript
 {
     "repositories": [
         {
@@ -19,6 +20,7 @@ Box PHP SDK
         "HoopCHINA/php-box-sdk": "dev-master"
     }
 }
+```
 
 3. 使用 php composer.phar install 安装依赖包。 
 
