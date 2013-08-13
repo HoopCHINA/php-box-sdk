@@ -1,5 +1,27 @@
 {
+    "name": "HoopCHINA/php-box-sdk",
+    "type": "library",
+    "description": "PHP Box SDK for use with Hupu Box service",
+    "keywords": ["hupu", "box", "client"],
+    "homepage": "https://github.com/HoopCHINA/php-box-sdk",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Wang Wenlin",
+            "email": "wangwenlin@hupu.com",
+            "homepage": "http://soplwang.com"
+        }
+    ],
+
     "require": {
+        "php": ">=5.3.2",
         "guzzle/guzzle": "~3.7"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Hupu\\Box": "src/"
+        }
     }
 }

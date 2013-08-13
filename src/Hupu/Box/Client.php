@@ -3,11 +3,12 @@
  Copyright 2013, Wenlin Wang <wangwenlin@hupu.com>
  */
 
-require_once __DIR__.'/../vendor/autoload.php';
+namespace Hupu\Box;
 
-class HupuBox_Exception extends Exception {};
-
-class HupuBox {
+/**
+ * Box REST service client
+ */
+class Client {
 
   private $service;
 
@@ -220,9 +221,9 @@ class HupuBox {
     try {
       return $req->send();
     } catch (\Guzzle\Http\Exception\BadResponseException $e) {
-      throw new HupuBox_Exception($e->getMessage(), $e->getResponse()->getStatusCode(), $e);
+      throw new RequestException($e->getMessage(), $e->getResponse()->getStatusCode(), $e);
     } catch (\Guzzle\Http\Exception\CurlException $e) {
-      throw new HupuBox_Exception($e->getMessage(), null, $e);
+      throw new RequestException($e->getMessage(), null, $e);
     }
   }
 

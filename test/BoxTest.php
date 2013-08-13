@@ -1,6 +1,9 @@
 <?php
+/*
+ Copyright 2013, Wenlin Wang <wangwenlin@hupu.com>
+ */
 
-require_once __DIR__.'/../src/box.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 //define('BOX_SERVICE', 'http://192.168.9.144:8080/pic-box-web');
 define('BOX_APP', 'ap4');
@@ -17,7 +20,7 @@ define('MY_FILE2_PATH', MY_PATH.'/'.MY_FILE2);
 define('MY_FILE3_PATH', MY_PATH.'/'.MY_FILE3);
 define('MY_FILE4_PATH', MY_PATH.'/'.MY_FILE4);
 
-$box = new HupuBox(array(
+$box = new \Hupu\Box\Client(array(
 //  'service' => BOX_SERVICE,
   'app' => BOX_APP,
   'secret' => BOX_SECRET,
