@@ -21,6 +21,7 @@ Box PHP SDK
         }
     }
     ```
+    _[NOTE: 也可以指定依赖 **0.1.x** 版本。]_
 
 3. 使用 php composer.phar install 安装依赖包。 
 
