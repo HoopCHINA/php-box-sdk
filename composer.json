@@ -4,7 +4,7 @@
     "description": "PHP Box SDK for use with Hupu Box service",
     "keywords": ["hupu", "box", "client"],
     "homepage": "https://github.com/HoopCHINA/php-box-sdk",
-    "license": "MIT",
+    "license": "Apache-2.0",
 
     "authors": [
         {
