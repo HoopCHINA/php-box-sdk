@@ -232,7 +232,7 @@ class Client {
   }
 
   private static function makepath__($bucket, $path) {
-    return ($bucket . $path);
+    return ($bucket . ($path[0] === '/' ? $path : '/' . $path));
   }
 
   private static function addMoveFrom__(&$headers, $move_from) {
