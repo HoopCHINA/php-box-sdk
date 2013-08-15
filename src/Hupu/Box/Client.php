@@ -62,7 +62,7 @@ class Client {
     return $arr;
   }
 
-  // TODO: need use 'HEAD' action
+  // TODO: need use 'HEAD' method
   // TODO: no auto create not exist transforms
   /**
    * Get file info
@@ -216,6 +216,8 @@ class Client {
     $headers = array();
 
     $req = $callback($this->client, $uri, $headers);
+    // TODO: add Content-MD5 support
+
     self::authorize__($req, $this->app, $this->secret);
 
     try {
@@ -285,6 +287,8 @@ class Client {
         $lines[] = $kk . ': ' . $v;
       }
     }
+
+    // TODO: add Content-MD5 support
 
     $headers = implode(' ', $headers);
     $lines = implode("\n", $lines);
